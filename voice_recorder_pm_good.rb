@@ -11,8 +11,6 @@ class VoiceRecorder
       @record = thing.play
     in String
       @record = thing
-    else
-      @record = thing.to_s
     end
   end
 
@@ -71,7 +69,6 @@ vr.record('ほげほげ')
 vr.play
 # => "ほげほげ"
 
-vr.record([1, 2, 3])
+vr.record(nil)
 vr.play
-# => "[1, 2, 3]"
-
+# => in `record': NoMatchingPatternError (NoMatchingPatternError)
